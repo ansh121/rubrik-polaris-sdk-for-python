@@ -52,7 +52,7 @@ def _build_graphql_maps(self):
             query_name = query_name.replace('{}_'.format(file_mutation_prefix), '')
 
         try:
-            graphql_file = open("{}/{}".format(self._data_path, f), 'r').read()
+            graphql_file = open("{}{}".format(self._data_path, f), 'r').read()
             graphql_details[query_name] = self._get_details_from_graphql_query(graphql_file)
             op_name = "SdkPython" + ''.join(w[:1].upper() + w[1:] for w in query_name.split('_'))
             graphql_details[query_name]['operation_name'] = op_name
