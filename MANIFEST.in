@@ -1,1 +1,1 @@
-include rubrik-polaris/common/graphql/*.graphql
+include common/graphql/*.graphql
